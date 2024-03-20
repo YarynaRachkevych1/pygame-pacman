@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="pl" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>main module &mdash; Pacman 1.0.0 - dokumentacja</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+        <script src="_static/translations.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Indeks" href="genindex.html" />
+    <link rel="search" title="Szukaj" href="search.html" />
+    <link rel="prev" title="constants module" href="constants.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Pacman
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Szukaj" aria-label="Szukaj" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">Pacman</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="Cherry.html">Cherry module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Collectible.html">Collectible module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Entity.html">Entity module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Ghost.html">Ghost module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Player.html">Player module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Point.html">Point module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="PowerUp.html">PowerUp module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="constants.html">constants module</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">main module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#main.Main"><code class="docutils literal notranslate"><span class="pre">Main</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#main.Main.is_running"><code class="docutils literal notranslate"><span class="pre">Main.is_running</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#main.Main.game_over"><code class="docutils literal notranslate"><span class="pre">Main.game_over</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#main.Main.screen"><code class="docutils literal notranslate"><span class="pre">Main.screen</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#main.Main.draw_screen"><code class="docutils literal notranslate"><span class="pre">Main.draw_screen</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#main.Main.timer"><code class="docutils literal notranslate"><span class="pre">Main.timer</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#main.Main.textures"><code class="docutils literal notranslate"><span class="pre">Main.textures</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#main.Main.player"><code class="docutils literal notranslate"><span class="pre">Main.player</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#main.Main.ghosts"><code class="docutils literal notranslate"><span class="pre">Main.ghosts</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#main.Main.collectible"><code class="docutils literal notranslate"><span class="pre">Main.collectible</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#main.Main.check_events"><code class="docutils literal notranslate"><span class="pre">Main.check_events()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#main.Main.check_ghost_player_collision"><code class="docutils literal notranslate"><span class="pre">Main.check_ghost_player_collision()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#main.Main.check_keys"><code class="docutils literal notranslate"><span class="pre">Main.check_keys()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#main.Main.create_ghosts"><code class="docutils literal notranslate"><span class="pre">Main.create_ghosts()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#main.Main.display_update"><code class="docutils literal notranslate"><span class="pre">Main.display_update()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#main.Main.draw"><code class="docutils literal notranslate"><span class="pre">Main.draw()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#main.Main.draw_board"><code class="docutils literal notranslate"><span class="pre">Main.draw_board()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#main.Main.game"><code class="docutils literal notranslate"><span class="pre">Main.game()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#main.Main.get_collectibles_id"><code class="docutils literal notranslate"><span class="pre">Main.get_collectibles_id()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#main.Main.load_textures"><code class="docutils literal notranslate"><span class="pre">Main.load_textures()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Pacman</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="modules.html">Pacman</a></li>
+      <li class="breadcrumb-item active">main module</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/main.rst.txt" rel="nofollow"> Zobacz źródło strony</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-main">
+<span id="main-module"></span><h1>main module<a class="headerlink" href="#module-main" title="Permalink to this heading"></a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="main.Main">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">main.</span></span><span class="sig-name descname"><span class="pre">Main</span></span><a class="headerlink" href="#main.Main" title="Stały odnośnik do tej definicji"></a></dt>
+<dd><p>Klasy bazowe: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="main.Main.is_running">
+<span class="sig-name descname"><span class="pre">is_running</span></span><a class="headerlink" href="#main.Main.is_running" title="Stały odnośnik do tej definicji"></a></dt>
+<dd><p>Stan uruchomienia gry. Początkowo ustawiony na True i służy do kontrolowania pętli gry</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="main.Main.game_over">
+<span class="sig-name descname"><span class="pre">game_over</span></span><a class="headerlink" href="#main.Main.game_over" title="Stały odnośnik do tej definicji"></a></dt>
+<dd><p>Atrybut wskazujący, czy gra się zakończyła. Początkowo ustawiony na False</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="main.Main.screen">
+<span class="sig-name descname"><span class="pre">screen</span></span><a class="headerlink" href="#main.Main.screen" title="Stały odnośnik do tej definicji"></a></dt>
+<dd><p>Obiekt klasy Surface z biblioteki Pygame, powierzchnię okna gry, na której renderowana jest gra</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="main.Main.draw_screen">
+<span class="sig-name descname"><span class="pre">draw_screen</span></span><a class="headerlink" href="#main.Main.draw_screen" title="Stały odnośnik do tej definicji"></a></dt>
+<dd><p>Obiekt klasy Surface z biblioteki Pygame, reprezentujący powierzchnię używaną do rysowania elementów gry</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="main.Main.timer">
+<span class="sig-name descname"><span class="pre">timer</span></span><a class="headerlink" href="#main.Main.timer" title="Stały odnośnik do tej definicji"></a></dt>
+<dd><p>Obiekt klasy Clock z biblioteki Pygame, używany do kontrolowania liczby klatek na sekundę w grze</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="main.Main.textures">
+<span class="sig-name descname"><span class="pre">textures</span></span><a class="headerlink" href="#main.Main.textures" title="Stały odnośnik do tej definicji"></a></dt>
+<dd><p>Słownik przechowujący załadowane tekstury używane w grze. Klucze to nazwy tekstur, a wartości to obiekty klasy Surface z biblioteki Pygame</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="main.Main.player">
+<span class="sig-name descname"><span class="pre">player</span></span><a class="headerlink" href="#main.Main.player" title="Stały odnośnik do tej definicji"></a></dt>
+<dd><p>Instancja klasy Player reprezentująca postać gracza w grze</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="main.Main.ghosts">
+<span class="sig-name descname"><span class="pre">ghosts</span></span><a class="headerlink" href="#main.Main.ghosts" title="Stały odnośnik do tej definicji"></a></dt>
+<dd><p>Lista zawierająca instancje klasy Ghost reprezentujące duchy w grze</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="main.Main.collectible">
+<span class="sig-name descname"><span class="pre">collectible</span></span><a class="headerlink" href="#main.Main.collectible" title="Stały odnośnik do tej definicji"></a></dt>
+<dd><p>Lista zawierająca instancje klas Point, PowerUp i Cherry reprezentujące przedmioty do zebrania w grze</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="main.Main.check_events">
+<span class="sig-name descname"><span class="pre">check_events</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#main.Main.check_events" title="Stały odnośnik do tej definicji"></a></dt>
+<dd><p>Funkcja spawdzająca zdarzena w grze
+Retruns:</p>
+<blockquote>
+<div><p>False, jeśli użytkownik naciśnie przycisk „Zamknij”</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="main.Main.check_ghost_player_collision">
+<span class="sig-name descname"><span class="pre">check_ghost_player_collision</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#main.Main.check_ghost_player_collision" title="Stały odnośnik do tej definicji"></a></dt>
+<dd><p>Funkcja aprawdzająca czy wystąpiła kolizija gracza z którymkolwiek duchem
+Retruns:</p>
+<blockquote>
+<div><p>True, jeśli kolizia wystąpiła</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="main.Main.check_keys">
+<span class="sig-name descname"><span class="pre">check_keys</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#main.Main.check_keys" title="Stały odnośnik do tej definicji"></a></dt>
+<dd><p>Funkcja sprawdzająca wciśnięcie klawiszy przez użytkownika i zmiany kierunku gracza na podstawie wciśniętych klawiszy</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="main.Main.create_ghosts">
+<span class="sig-name descname"><span class="pre">create_ghosts</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#main.Main.create_ghosts" title="Stały odnośnik do tej definicji"></a></dt>
+<dd><p>Funkcja tworząca duchów
+:returns: Lista obiektów duchów, gdzie każdy duch jest tworzony na podstawie pozycji startowych</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="main.Main.display_update">
+<span class="sig-name descname"><span class="pre">display_update</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#main.Main.display_update" title="Stały odnośnik do tej definicji"></a></dt>
+<dd><p>Funkcja odświeżająca ekran i przeskalowująca powierzchnie do rysowania</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="main.Main.draw">
+<span class="sig-name descname"><span class="pre">draw</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#main.Main.draw" title="Stały odnośnik do tej definicji"></a></dt>
+<dd><p>Funkcja odpowiedzialna za rysowanie grafiki gry na ekranie</p>
+<p>Na początku wypełnia ekran kolorem tła, a następnie rysuje planszę gry.
+Następnie rysuje gracza, biorąc pod uwagę aktualną animację i kierunek poruszania się gracza. Jeśli kierunek gracza jest w lewo,
+tekstura gracza zostaje odbita lustrzanie. Jeśli kierunek gracza jest w górę, tekstura gracza zostaje obrócona o 90 stopni
+zgodnie z ruchem wskazówek zegara. Jeśli kierunek gracza jest w dół, tekstura gracza zostaje obrócona o 90 stopni przeciwnie
+do ruchu wskazówek zegara</p>
+<p>Następnie rysuje przedmioty do zebrania na planszy gry</p>
+<p>Następnie rysuje duchów. Wykorzystywane są różne tekstury dla każdego ducha, a także możliwość dezaktywacji
+duchów, gdy gracz może je zjeść</p>
+<p>Na końcu, jeśli gra jest zakończona, w zależności od wyniku gry wyświetla się odpowiedni komunikat („You Win” lub „Game Over”)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="main.Main.draw_board">
+<span class="sig-name descname"><span class="pre">draw_board</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#main.Main.draw_board" title="Stały odnośnik do tej definicji"></a></dt>
+<dd><p>Funkcja rysująca planszę na powierzchni do rysowania
+Przechodzi po tablice BOARD i w zależności od znaczenia rysuje odpowiedni rysunek</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="main.Main.game">
+<span class="sig-name descname"><span class="pre">game</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#main.Main.game" title="Stały odnośnik do tej definicji"></a></dt>
+<dd><p>Funkcja zawierająca główną logikę gry</p>
+<p>Jeśli gra nie jest zakończona, aktualizowane są położenie gracza i duchów</p>
+<dl class="simple">
+<dt>Zmienia wartość atrybutu game_over na True, jeśli:</dt><dd><p>wystąpiła kolizia gracza z duchem - warunek przegranej
+gracz zebrał wszystkie punkty z planszy - warunek wygranej</p>
+</dd>
+</dl>
+<p>Również sprawdzane są kolizje gracza z przedmiotami do zebrania. Jeśli gracz koliduje z punktem, zwiększana
+jest liczba zebranych punktów. Jeśli gracz koliduje z power-upem, ustawiany jest timer, który pozwala graczowi na zjedzenie duchów.
+Jeśli gracz koliduje z wiśnią, ustawiany jest timer, który wpływa na szybkość poruszania się duchów</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="main.Main.get_collectibles_id">
+<span class="sig-name descname"><span class="pre">get_collectibles_id</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#main.Main.get_collectibles_id" title="Stały odnośnik do tej definicji"></a></dt>
+<dd><p>Funkcja tworząca punkty do zbierania
+Retruns:</p>
+<blockquote>
+<div><p>Lista objektów wszystkich rodzai punktów do zrierania</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="main.Main.load_textures">
+<span class="sig-name descname"><span class="pre">load_textures</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#main.Main.load_textures" title="Stały odnośnik do tej definicji"></a></dt>
+<dd><p>Funkcja wczytująca tekstury gry z plików znajdujących się w katalogu „textures” i przechowuje je w słowniku textures.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="constants.html" class="btn btn-neutral float-left" title="constants module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Poprzedni</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Yaryna Rachkevych.</p>
+  </div>
+
+  Zbudowano w <a href="https://www.sphinx-doc.org/">Sphinx</a> używając
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    dostarczone przez <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

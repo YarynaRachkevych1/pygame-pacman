@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="pl" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>constants module &mdash; Pacman 1.0.0 - dokumentacja</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+        <script src="_static/translations.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Indeks" href="genindex.html" />
+    <link rel="search" title="Szukaj" href="search.html" />
+    <link rel="next" title="main module" href="main.html" />
+    <link rel="prev" title="PowerUp module" href="PowerUp.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Pacman
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Szukaj" aria-label="Szukaj" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">Pacman</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="Cherry.html">Cherry module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Collectible.html">Collectible module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Entity.html">Entity module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Ghost.html">Ghost module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Player.html">Player module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Point.html">Point module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="PowerUp.html">PowerUp module</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">constants module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#constants.BACKGROUND_COLOR"><code class="docutils literal notranslate"><span class="pre">BACKGROUND_COLOR</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#constants.BOARD_SIZE"><code class="docutils literal notranslate"><span class="pre">BOARD_SIZE</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#constants.BOARD_TILE_SIZE"><code class="docutils literal notranslate"><span class="pre">BOARD_TILE_SIZE</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#constants.CAN_EAT_TIMER"><code class="docutils literal notranslate"><span class="pre">CAN_EAT_TIMER</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#constants.CHERRY_TIMER"><code class="docutils literal notranslate"><span class="pre">CHERRY_TIMER</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#constants.ENTITY_BASE_SPEED"><code class="docutils literal notranslate"><span class="pre">ENTITY_BASE_SPEED</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#constants.FPS"><code class="docutils literal notranslate"><span class="pre">FPS</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#constants.GHOSTS_START_POS"><code class="docutils literal notranslate"><span class="pre">GHOSTS_START_POS</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#constants.GHOST_CHANGE_DIRECTION_TIMER"><code class="docutils literal notranslate"><span class="pre">GHOST_CHANGE_DIRECTION_TIMER</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#constants.PLAYER_ANIMATION_FRAMES"><code class="docutils literal notranslate"><span class="pre">PLAYER_ANIMATION_FRAMES</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#constants.PLAYER_ANIMATION_SPEED"><code class="docutils literal notranslate"><span class="pre">PLAYER_ANIMATION_SPEED</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#constants.PLAYER_CHERRY_SPEED"><code class="docutils literal notranslate"><span class="pre">PLAYER_CHERRY_SPEED</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#constants.PLAYER_SHIFT"><code class="docutils literal notranslate"><span class="pre">PLAYER_SHIFT</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#constants.PLAYER_START_POS"><code class="docutils literal notranslate"><span class="pre">PLAYER_START_POS</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#constants.SCREEN_SIZE"><code class="docutils literal notranslate"><span class="pre">SCREEN_SIZE</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#constants.WALL_IDS"><code class="docutils literal notranslate"><span class="pre">WALL_IDS</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="main.html">main module</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Pacman</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="modules.html">Pacman</a></li>
+      <li class="breadcrumb-item active">constants module</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/constants.rst.txt" rel="nofollow"> Zobacz źródło strony</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-constants">
+<span id="constants-module"></span><h1>constants module<a class="headerlink" href="#module-constants" title="Permalink to this heading"></a></h1>
+<p>Rozmiar ekranu gry</p>
+<dl class="py data">
+<dt class="sig sig-object py" id="constants.BACKGROUND_COLOR">
+<span class="sig-prename descclassname"><span class="pre">constants.</span></span><span class="sig-name descname"><span class="pre">BACKGROUND_COLOR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'black'</span></em><a class="headerlink" href="#constants.BACKGROUND_COLOR" title="Stały odnośnik do tej definicji"></a></dt>
+<dd><p>Początkowa pozycja gracza na planszy</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="constants.BOARD_SIZE">
+<span class="sig-prename descclassname"><span class="pre">constants.</span></span><span class="sig-name descname"><span class="pre">BOARD_SIZE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">(30,</span> <span class="pre">33)</span></em><a class="headerlink" href="#constants.BOARD_SIZE" title="Stały odnośnik do tej definicji"></a></dt>
+<dd><p>Szybkość animacji się gracza</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="constants.BOARD_TILE_SIZE">
+<span class="sig-prename descclassname"><span class="pre">constants.</span></span><span class="sig-name descname"><span class="pre">BOARD_TILE_SIZE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">10</span></em><a class="headerlink" href="#constants.BOARD_TILE_SIZE" title="Stały odnośnik do tej definicji"></a></dt>
+<dd><p>Rozmiar planszy w jednostkach kafelków</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="constants.CAN_EAT_TIMER">
+<span class="sig-prename descclassname"><span class="pre">constants.</span></span><span class="sig-name descname"><span class="pre">CAN_EAT_TIMER</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">500</span></em><a class="headerlink" href="#constants.CAN_EAT_TIMER" title="Stały odnośnik do tej definicji"></a></dt>
+<dd><p>Czas trwania, w którym działa bonus wiśni, wyrażony w milisekundach</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="constants.CHERRY_TIMER">
+<span class="sig-prename descclassname"><span class="pre">constants.</span></span><span class="sig-name descname"><span class="pre">CHERRY_TIMER</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">200</span></em><a class="headerlink" href="#constants.CHERRY_TIMER" title="Stały odnośnik do tej definicji"></a></dt>
+<dd><p>Częstotliwość zmiany kierunku poruszania się duchów, wyrażona jako liczba klatek</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="constants.ENTITY_BASE_SPEED">
+<span class="sig-prename descclassname"><span class="pre">constants.</span></span><span class="sig-name descname"><span class="pre">ENTITY_BASE_SPEED</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#constants.ENTITY_BASE_SPEED" title="Stały odnośnik do tej definicji"></a></dt>
+<dd><p>Prędkość dla gracza po zriebaniu wiśni</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="constants.FPS">
+<span class="sig-prename descclassname"><span class="pre">constants.</span></span><span class="sig-name descname"><span class="pre">FPS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">60</span></em><a class="headerlink" href="#constants.FPS" title="Stały odnośnik do tej definicji"></a></dt>
+<dd><p>Kolor tła gry</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="constants.GHOSTS_START_POS">
+<span class="sig-prename descclassname"><span class="pre">constants.</span></span><span class="sig-name descname"><span class="pre">GHOSTS_START_POS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[(145,</span> <span class="pre">150),</span> <span class="pre">(145,</span> <span class="pre">150),</span> <span class="pre">(145,</span> <span class="pre">150),</span> <span class="pre">(145,</span> <span class="pre">150),</span> <span class="pre">(145,</span> <span class="pre">150)]</span></em><a class="headerlink" href="#constants.GHOSTS_START_POS" title="Stały odnośnik do tej definicji"></a></dt>
+<dd><p>Bazowa prędkość poruszania się jednostek na planszy</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="constants.GHOST_CHANGE_DIRECTION_TIMER">
+<span class="sig-prename descclassname"><span class="pre">constants.</span></span><span class="sig-name descname"><span class="pre">GHOST_CHANGE_DIRECTION_TIMER</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">40</span></em><a class="headerlink" href="#constants.GHOST_CHANGE_DIRECTION_TIMER" title="Stały odnośnik do tej definicji"></a></dt>
+<dd><p>Dwuwymiarowa lista reprezentująca planszę gry.
+Każda liczba w tej liście odpowiada identyfikatorowi konkretnego kafelka na planszy, np. ściany, pustego miejsca itp</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="constants.PLAYER_ANIMATION_FRAMES">
+<span class="sig-prename descclassname"><span class="pre">constants.</span></span><span class="sig-name descname"><span class="pre">PLAYER_ANIMATION_FRAMES</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">2</span></em><a class="headerlink" href="#constants.PLAYER_ANIMATION_FRAMES" title="Stały odnośnik do tej definicji"></a></dt>
+<dd><p>Przesunięcie gracza od lewego górnego rogu kafelka</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="constants.PLAYER_ANIMATION_SPEED">
+<span class="sig-prename descclassname"><span class="pre">constants.</span></span><span class="sig-name descname"><span class="pre">PLAYER_ANIMATION_SPEED</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0.1</span></em><a class="headerlink" href="#constants.PLAYER_ANIMATION_SPEED" title="Stały odnośnik do tej definicji"></a></dt>
+<dd><p>Liczba ramek animacji gracza</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="constants.PLAYER_CHERRY_SPEED">
+<span class="sig-prename descclassname"><span class="pre">constants.</span></span><span class="sig-name descname"><span class="pre">PLAYER_CHERRY_SPEED</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1.5</span></em><a class="headerlink" href="#constants.PLAYER_CHERRY_SPEED" title="Stały odnośnik do tej definicji"></a></dt>
+<dd><p>Rozmiar pojedynczego kafelka na plansz</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="constants.PLAYER_SHIFT">
+<span class="sig-prename descclassname"><span class="pre">constants.</span></span><span class="sig-name descname"><span class="pre">PLAYER_SHIFT</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">(3,</span> <span class="pre">3)</span></em><a class="headerlink" href="#constants.PLAYER_SHIFT" title="Stały odnośnik do tej definicji"></a></dt>
+<dd><p>Lista identyfikatorów kafelków reprezentujących ściany na planszy</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="constants.PLAYER_START_POS">
+<span class="sig-prename descclassname"><span class="pre">constants.</span></span><span class="sig-name descname"><span class="pre">PLAYER_START_POS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">(150,</span> <span class="pre">240)</span></em><a class="headerlink" href="#constants.PLAYER_START_POS" title="Stały odnośnik do tej definicji"></a></dt>
+<dd><p>Początkowe pozycje duchów na planszy, reprezentowane jako lista krotek (x, y) współrzędnych dla każdego ducha</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="constants.SCREEN_SIZE">
+<span class="sig-prename descclassname"><span class="pre">constants.</span></span><span class="sig-name descname"><span class="pre">SCREEN_SIZE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">(600,</span> <span class="pre">660)</span></em><a class="headerlink" href="#constants.SCREEN_SIZE" title="Stały odnośnik do tej definicji"></a></dt>
+<dd><p>Liczba klatek na sekundę (frames per second), określająca częstotliwość odświeżania gry</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="constants.WALL_IDS">
+<span class="sig-prename descclassname"><span class="pre">constants.</span></span><span class="sig-name descname"><span class="pre">WALL_IDS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[3,</span> <span class="pre">4,</span> <span class="pre">5,</span> <span class="pre">6,</span> <span class="pre">7,</span> <span class="pre">8]</span></em><a class="headerlink" href="#constants.WALL_IDS" title="Stały odnośnik do tej definicji"></a></dt>
+<dd><p>Czas trwania okresu, w którym gracz może zjadać duchy po zjedzeniu superowocu, wyrażony w milisekundach</p>
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="PowerUp.html" class="btn btn-neutral float-left" title="PowerUp module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Poprzedni</a>
+        <a href="main.html" class="btn btn-neutral float-right" title="main module" accesskey="n" rel="next">Następny <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Yaryna Rachkevych.</p>
+  </div>
+
+  Zbudowano w <a href="https://www.sphinx-doc.org/">Sphinx</a> używając
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    dostarczone przez <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
